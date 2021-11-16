@@ -1,8 +1,8 @@
 {% extends "core/base.html" %}
 {% load static %}
-{% block tittle %}Blog{% endblock tittle %}
+{% block tittle %}{{categoria}}{% endblock tittle %}
 {% block content %}
-  {% for post in posteos %}
+  {% for post in categoria.get_posts.all %}
     <section class="page-section cta">
       <div class="container">
         <div class="row">
@@ -19,9 +19,10 @@
               </p>
               <p class="mb-0 mbt">
                 <span class="section-heading-under">Publicado por <em><b>{{ post.author }}</b></em> en 
-                  {% for category in post.categories.all %}
-                      <a href="{% url 'category' category.id %}" class="link">{{category.name}}</a>{% if not forloop.last %},{% endif %}
-                  {% endfor %}
+                {% for category in post.categories.all %}
+                    <a href="{% url 'category' category.id %}" class="link">{{category.name}}</a>{% if not forloop.last %},{% endif %}
+                {% endfor %}
+              </span>
               </p>
             </div>
           </div>
