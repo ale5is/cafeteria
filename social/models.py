@@ -1,6 +1,6 @@
 from django.db import models
 
-class link(models.Model):
+class Link(models.Model):
     key= models.SlugField(verbose_name='Nombre clave', max_length=100, unique=True)
     name= models.CharField(verbose_name='Red Social', max_length=200)
     url= models.URLField(verbose_name='Link', null=True, blank=True)

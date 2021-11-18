@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import link
+from .models import Link
 
-class linkAdmin(admin.ModelAdmin):
+class LinkAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(link, linkAdmin)
+admin.site.register(Link, LinkAdmin)
