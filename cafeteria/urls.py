@@ -11,6 +11,8 @@ urlpatterns = [
     path('', include('core.urls') ),
     #path services
     path('services/', include('services.urls')),
+    #path sample
+    path('pages/', include('pages.urls') )
 
 ]
 
