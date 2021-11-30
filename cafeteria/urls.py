@@ -8,11 +8,13 @@ urlpatterns = [
     #path blog
     path('blog/', include('blog.urls')),
     #path core
-    path('', include('core.urls') ),
+    path('', include('core.urls')),
     #path services
     path('services/', include('services.urls')),
     #path sample
-    path('pages/', include('pages.urls') )
+    path('pages/', include('pages.urls')),
+    #path contact
+    path('contact/', include('contact.urls')),
 
 ]
 
